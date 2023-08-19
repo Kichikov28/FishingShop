@@ -21,5 +21,6 @@ namespace FishingShop.Models
 
         public virtual ICollection<Catalog> Catalogs { get; set; }=new List<Catalog>();
         public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
+        public virtual ICollection<Employee> Employees { get; set; } = new List<Employee>();
     }
 }

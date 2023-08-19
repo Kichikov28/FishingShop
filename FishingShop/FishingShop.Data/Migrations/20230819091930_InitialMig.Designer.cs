@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FishingShop.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230811122820_FishingShopMigration")]
-    partial class FishingShopMigration
+    [Migration("20230819091930_InitialMig")]
+    partial class InitialMig
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -116,7 +116,12 @@ namespace FishingShop.Data.Migrations
                     b.Property<decimal>("Salary")
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<int?>("ShopId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("ShopId");
 
                     b.ToTable("Employees");
                 });
@@ -181,18 +186,12 @@ namespace FishingShop.Data.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
-
-                    b.Property<int>("StockQuantity")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -250,6 +249,13 @@ namespace FishingShop.Data.Migrations
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("FishingShop.Models.Employee", b =>
+                {
+                    b.HasOne("FishingShop.Models.Shop", null)
+                        .WithMany("Employees")
+                        .HasForeignKey("ShopId");
                 });
 
             modelBuilder.Entity("FishingShop.Models.Order", b =>

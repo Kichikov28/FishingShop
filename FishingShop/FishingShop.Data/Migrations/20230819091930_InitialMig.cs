@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace FishingShop.Data.Migrations
 {
-    public partial class FishingShopMigration : Migration
+    public partial class InitialMig : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -25,33 +25,13 @@ namespace FishingShop.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Employees",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    FirstName = table.Column<string>(nullable: false),
-                    LastName = table.Column<string>(nullable: false),
-                    Age = table.Column<int>(nullable: false),
-                    Position = table.Column<string>(nullable: false),
-                    Salary = table.Column<decimal>(nullable: false),
-                    ContactPhone = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Employees", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Products",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(nullable: false),
-                    Price = table.Column<decimal>(nullable: false),
-                    StockQuantity = table.Column<int>(nullable: false),
-                    Description = table.Column<string>(nullable: true)
+                    Price = table.Column<decimal>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -93,6 +73,31 @@ namespace FishingShop.Data.Migrations
                         principalTable: "Shops",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Employees",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FirstName = table.Column<string>(nullable: false),
+                    LastName = table.Column<string>(nullable: false),
+                    Age = table.Column<int>(nullable: false),
+                    Position = table.Column<string>(nullable: false),
+                    Salary = table.Column<decimal>(nullable: false),
+                    ContactPhone = table.Column<string>(nullable: true),
+                    ShopId = table.Column<int>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Employees", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Employees_Shops_ShopId",
+                        column: x => x.ShopId,
+                        principalTable: "Shops",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -183,6 +188,11 @@ namespace FishingShop.Data.Migrations
                 name: "IX_Catalogs_FishingShopId",
                 table: "Catalogs",
                 column: "FishingShopId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Employees_ShopId",
+                table: "Employees",
+                column: "ShopId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_OrderProducts_OrderId",

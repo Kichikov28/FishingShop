@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishingShop.Models", "FishingShop.Models\FishingShop.Models.csproj", "{5AAB5EB6-05DD-4C4B-BC51-3ED641104C87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishingShop.Models", "FishingShop.Models\FishingShop.Models.csproj", "{5AAB5EB6-05DD-4C4B-BC51-3ED641104C87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishingShop.Data", "FishingShop.Data\FishingShop.Data.csproj", "{EAE79C06-DD30-4D53-B1F4-9F5BEA278A51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishingShop.Data", "FishingShop.Data\FishingShop.Data.csproj", "{EAE79C06-DD30-4D53-B1F4-9F5BEA278A51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishingShop.Services", "FishingShop.Services\FishingShop.Services.csproj", "{0312CADE-B8C6-4A9B-A5E3-2ED34F5704A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{EAE79C06-DD30-4D53-B1F4-9F5BEA278A51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAE79C06-DD30-4D53-B1F4-9F5BEA278A51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAE79C06-DD30-4D53-B1F4-9F5BEA278A51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0312CADE-B8C6-4A9B-A5E3-2ED34F5704A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0312CADE-B8C6-4A9B-A5E3-2ED34F5704A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0312CADE-B8C6-4A9B-A5E3-2ED34F5704A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0312CADE-B8C6-4A9B-A5E3-2ED34F5704A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

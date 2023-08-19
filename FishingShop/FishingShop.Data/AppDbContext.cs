@@ -63,6 +63,8 @@
             {
                 option.Property(x => x.Name)
                 .IsRequired();
+                option.Property(x=>x.Price)
+                .IsRequired();
             });
             modelBuilder.Entity<Employee>(option =>
             {
