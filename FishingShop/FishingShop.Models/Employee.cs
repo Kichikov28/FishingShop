@@ -18,5 +18,7 @@ namespace FishingShop.Models
         public string Position { get; set; }
         public decimal Salary { get; set; }
         public string ContactPhone { get; set; }
+        public int ShopId { get; set; }
+        public virtual Shop Shop { get; set; }
     }
 }

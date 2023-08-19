@@ -114,7 +114,7 @@ namespace FishingShop.Data.Migrations
                     b.Property<decimal>("Salary")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int?>("ShopId")
+                    b.Property<int>("ShopId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -251,9 +251,11 @@ namespace FishingShop.Data.Migrations
 
             modelBuilder.Entity("FishingShop.Models.Employee", b =>
                 {
-                    b.HasOne("FishingShop.Models.Shop", null)
+                    b.HasOne("FishingShop.Models.Shop", "Shop")
                         .WithMany("Employees")
-                        .HasForeignKey("ShopId");
+                        .HasForeignKey("ShopId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("FishingShop.Models.Order", b =>

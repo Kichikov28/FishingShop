@@ -87,7 +87,7 @@ namespace FishingShop.Data.Migrations
                     Position = table.Column<string>(nullable: false),
                     Salary = table.Column<decimal>(nullable: false),
                     ContactPhone = table.Column<string>(nullable: true),
-                    ShopId = table.Column<int>(nullable: true)
+                    ShopId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -97,7 +97,7 @@ namespace FishingShop.Data.Migrations
                         column: x => x.ShopId,
                         principalTable: "Shops",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(

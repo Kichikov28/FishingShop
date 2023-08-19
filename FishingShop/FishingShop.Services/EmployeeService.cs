@@ -10,7 +10,7 @@
     public class EmployeeService
     {
         private AppDbContext context;
-        public string HireEmployee(string firstName, string lastName, int age, string position, decimal salary, string contactPhone)
+        public string HireEmployee(string firstName, string lastName, int age, string position, decimal salary, string contactPhone,int shopId)
         {
             StringBuilder message = new StringBuilder();
             bool isValid = true;
@@ -45,6 +45,11 @@
                 message.AppendLine($"Invalid {nameof(contactPhone)}");
                 isValid = false;
             }
+            if (shopId < 1)
+            {
+                message.AppendLine($"Invalid {nameof(shopId)}");
+                isValid = false;
+            }
             if (isValid)
             {
                 Employee employee = new Employee()
@@ -54,13 +59,14 @@
                     Age = age,
                     Position= position,
                     Salary = salary,
-                    ContactPhone = contactPhone
+                    ContactPhone = contactPhone,
+                    ShopId=shopId
                 };
                 using (context = new AppDbContext())
                 {
                     context.Employees.Add(employee);
                     context.SaveChanges();
-                    message.AppendLine($"Employee {firstName} {lastName} is added!");
+                    message.AppendLine($"Employee {firstName} {lastName} is hired!");
                 }
             }
             return message.ToString().TrimEnd();

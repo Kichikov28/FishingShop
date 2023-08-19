@@ -12,7 +12,7 @@
     public class ClientService
     {
         private AppDbContext context;
-        public string AddCustomer(string firstName,string lastName,string email, string phoneNumber, string adress)
+        public string AddClient(string firstName,string lastName,string email, string phoneNumber, string adress)
         {
             StringBuilder message= new StringBuilder();
             bool isValid = true;
