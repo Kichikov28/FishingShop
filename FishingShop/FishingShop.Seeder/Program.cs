@@ -13,10 +13,10 @@
         public static EmployeeService employeeService = new EmployeeService();
         public static void Main()
         {
-            //SeedShops();
-            //SeedCatalogs();
-            //SeedProducts();
-            //SeedClients();
+            SeedShops();
+            SeedCatalogs();
+            SeedProducts();
+            SeedClients();
             SeedEmployees();
         }
         public static void SeedShops()
@@ -81,16 +81,24 @@
         }
         public static void SeedEmployees()
         {
-            Console.WriteLine(employeeService.HireEmployee("Ivaylo", "Dimitrov", 28, "Sales Associate", 30000, "123-456-7890"));
-            Console.WriteLine(employeeService.HireEmployee("Elena", "Georgieva", 32, "Manager", 45000, "987-654-3210"));
-            Console.WriteLine(employeeService.HireEmployee("Stefan", "Petrov", 23, "Cashier", 25000, "555-123-4567"));
-            Console.WriteLine(employeeService.HireEmployee("Nadia", "Ivanova", 26, "Sales Associate", 28000, "444-555-6666"));
-            Console.WriteLine(employeeService.HireEmployee("Viktor", "Stoyanov", 30, "Manager", 48000, "777-888-9999"));
-            Console.WriteLine(employeeService.HireEmployee("Maria", "Kostova", 29, "Assistant Manager", 38000, "222-333-4444"));
-            Console.WriteLine(employeeService.HireEmployee("Ivan", "Nikolov", 35, "Cashier", 26000, "888-999-0000"));
-            Console.WriteLine(employeeService.HireEmployee("Aneta", "Todorova", 22, "Sales Associate", 27000, "111-222-3333"));
-            Console.WriteLine(employeeService.HireEmployee("Daniel", "Georgiev", 27, "Manager", 46000, "333-444-5555"));
-            Console.WriteLine(employeeService.HireEmployee("Elitsa", "Pavlova", 31, "Cashier", 24000, "666-777-8888"));
+            List<string> firstName = new List<string>() { "Ivaylo", "Petyr", "Viktor", "Stefan", "Ivan", "Anton", "Daniel", "Marin", "Tihomir", "Vasil", "Mario", "Lorenco" };
+            List<string> lastName = new List<string>() { "Ivanov", "Petrov", "Gospodinov", "Georgiev", "Gagov", "Maladinov", "Nikolov", "Dimitrov", "Stoyanov", "Pavlov", "Kostov", "Todorov" };
+            List<string> position = new List<string>() { "Sales Associate", "Manager" , "Cashier" , "Assistant Manager"};
+            List<string> contactPhone = new List<string>() { "0891254832", "0897654892", "0872054891", "0897725192", "0897657210", "0897654828", "0897612345", "0897731897", "0897654821", "0897654842" };
+            Random random = new Random();
+            for (int i = 0; i < 12; i++)
+            {
+                int employeeFirstName = random.Next(0, firstName.Count);
+                int employeeLastName = random.Next(0, lastName.Count);
+                int age = random.Next(18, 60);
+                int employeePosition= random.Next(0, position.Count);
+                decimal minSalary = 1000;
+                decimal maxSalary = 5000;
+                decimal salary= (decimal)random.NextDouble() * (maxSalary - minSalary) + minSalary;
+                int employeeContactPhone = random.Next(0, contactPhone.Count);
+                Console.WriteLine(employeeService.HireEmployee(firstName[employeeFirstName], lastName[employeeLastName], age, position[employeePosition], salary, contactPhone[employeeContactPhone]));
+            }
+          
 
         }
     }

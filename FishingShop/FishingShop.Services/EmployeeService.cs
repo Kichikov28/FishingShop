@@ -10,7 +10,7 @@
     public class EmployeeService
     {
         private AppDbContext context;
-        public string HireEmployee(string firstName, string lastName, int age, string position, decimal salary, string contactPhone,int shopId)
+        public string HireEmployee(string firstName, string lastName, int age, string position, decimal salary, string contactPhone)
         {
             StringBuilder message = new StringBuilder();
             bool isValid = true;
@@ -45,28 +45,31 @@
                 message.AppendLine($"Invalid {nameof(contactPhone)}");
                 isValid = false;
             }
-            if (shopId < 1)
-            {
-                message.AppendLine($"Invalid {nameof(shopId)}");
-                isValid = false;
-            }
             if (isValid)
             {
-                Employee employee = new Employee()
-                {
-                    FirstName = firstName,
-                    LastName = lastName,
-                    Age = age,
-                    Position= position,
-                    Salary = salary,
-                    ContactPhone = contactPhone,
-                    ShopId=shopId
-                };
                 using (context = new AppDbContext())
                 {
-                    context.Employees.Add(employee);
-                    context.SaveChanges();
-                    message.AppendLine($"Employee {firstName} {lastName} is hired!");
+                    var shop = context.Shops.FirstOrDefault();
+                    if (shop != null)
+                    {
+                        Employee employee = new Employee()
+                        {
+                            FirstName = firstName,
+                            LastName = lastName,
+                            Age = age,
+                            Position = position,
+                            Salary = salary,
+                            ContactPhone = contactPhone,
+                            ShopId = shop.Id
+                        };
+                        context.Employees.Add(employee);
+                        context.SaveChanges();
+                        message.AppendLine($"Employee {firstName} {lastName} is hired at shop {shop.Name}!");
+                    }
+                    else
+                    {
+                        message.AppendLine($"No shop found to hire the employee!");
+                    }
                 }
             }
             return message.ToString().TrimEnd();

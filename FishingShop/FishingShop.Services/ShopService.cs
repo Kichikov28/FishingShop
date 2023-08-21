@@ -11,7 +11,7 @@
         private AppDbContext context;
         public string AddShop(string name, string location, string type, double rating)
         {
-            StringBuilder message=new StringBuilder();
+            StringBuilder message = new StringBuilder();
             bool isValid = true;
             if (string.IsNullOrWhiteSpace(name))
             {
@@ -28,7 +28,7 @@
                 message.AppendLine($"Invalid {nameof(type)}!");
                 isValid = false;
             }
-            if (rating<2||rating>10)
+            if (rating < 2 || rating > 10)
             {
                 message.AppendLine($"Invalid {nameof(rating)}!");
                 isValid = false;
@@ -40,7 +40,8 @@
                     Name = name,
                     Location = location,
                     Type = type,
-                   Rating= rating
+                    Rating = rating,
+                    EstablishedOn = GenerateRandomDate()
                 };
                 using (context = new AppDbContext())
                 {
@@ -52,6 +53,7 @@
             return message.ToString().TrimEnd();
 
         }
+
         public Shop GetShopById(int id)
         {
             using (context = new AppDbContext())
@@ -98,7 +100,7 @@
         public string GetAllShopsInfo(int page = 1, int count = 10)
         {
             StringBuilder message = new StringBuilder();
-            string firstRow = $"| {"Id",-4} | {"Name",-12} | {"Type",-10} | {"Rating",-3} | {"Location",-12}|";
+            string firstRow = $"| {"Id",-4} | {"Name",-30} | {"Type",-15} | {"Rating",-5} | {"Location",-15}|";
 
             string line = $"|{new string('-', firstRow.Length - 2)}|";
 
@@ -112,7 +114,7 @@
                 message.AppendLine(line);
                 foreach (var s in shops)
                 {
-                    string info = $"| {s.Id,-4} | {s.Name,-12} | {s.Type,-10} | {s.Rating,-3} | {s.Location,-12}|";
+                    string info = $"| {s.Id,-4} | {s.Name,-30} | {s.Type,-15} | {s.Rating,-6} | {s.Location,-15}|";
                     message.AppendLine(info);
                     message.AppendLine(line);
                 }
@@ -121,12 +123,24 @@
             }
             return message.ToString().TrimEnd();
         }
-        public int GetRestaurantPagesCount(int count = 10)
+        public int GetShopsPagesCount(int count = 10)
         {
             using (context = new AppDbContext())
             {
                 return (int)Math.Ceiling(context.Shops.Count() / (double)count);
             }
         }
+        private DateTime GenerateRandomDate()
+        {
+            DateTime startDate = new DateTime(2010, 1, 1);
+            DateTime endDate = new DateTime(2023, 12, 31);
+
+            Random random = new Random();
+            int range = (endDate - startDate).Days;
+            int randomDays = random.Next(range);
+
+            return startDate.AddDays(randomDays);
+        }
     }
 }
+

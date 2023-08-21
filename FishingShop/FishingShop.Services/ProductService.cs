@@ -91,7 +91,7 @@
         public string GetAllProductsInfo(int page = 1, int count = 10)
         {
             StringBuilder message = new StringBuilder();
-            string firstRow = $"| {"Id",-4} | {"Name",-20} | {"Price",-3}|";
+            string firstRow = $"| {"Id",-4} | {"Name",-20} | {"Price",-5}|";
 
             string line = $"|{new string('-', firstRow.Length - 2)}|";
 
@@ -105,7 +105,7 @@
                 message.AppendLine(line);
                 foreach (var p in products)
                 {
-                    string info = $"| {p.Id,-4} | {p.Name,-20} | {p.Price,-3}|";
+                    string info = $"| {p.Id,-4} | {p.Name,-20} | {p.Price,-5}|";
                     message.AppendLine(info);
                     message.AppendLine(line);
                 }
@@ -115,7 +115,7 @@
 
             return message.ToString().TrimEnd();
         }
-        public int GetItemsPagesCount(int count = 10)
+        public int GetProductsPagesCount(int count = 10)
         {
             using (context = new AppDbContext())
             {

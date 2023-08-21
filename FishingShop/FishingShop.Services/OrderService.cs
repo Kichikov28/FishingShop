@@ -9,14 +9,14 @@
     public class OrderService
     {
         private AppDbContext context;
-        public string CreateOrder(int shoptId, int customerId, List<int> productId)
+        public string CreateOrder(int shoptId, int clietntId, List<int> productId)
         {
             using (context = new AppDbContext())
             {
                 Order order = new Order()
                 {
                     ShopId = shoptId,
-                    CustomerId = customerId
+                    ClientId = clietntId
                 };
                 foreach (var item in productId)
                 {
@@ -44,8 +44,8 @@
             List<string> productsInfo;
             using (context = new AppDbContext())
             {
-                productsInfo = this.context.Products.
-                     OrderBy(x => x.Id)
+                productsInfo = this.context.Products
+                    .OrderBy(x => x.Id)
                      .Select(x => $"{x.Id} - {x.Name} - {x.Price}")
                      .ToList();
             }

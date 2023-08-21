@@ -15,7 +15,7 @@
         [NotMapped]
         public decimal TotalAmount { get => OrderProducts.Sum(x => x.Product.Id);}
 
-        public int CustomerId { get; set; }
+        public int ClientId { get; set; }
 
         public virtual Shop Shop { get; set; }
         public virtual ICollection<OrderProduct> OrderProducts { get; set; } = new List<OrderProduct>();
