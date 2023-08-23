@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.btnShop = new System.Windows.Forms.Button();
+            this.btnEmployees = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnShop
@@ -42,15 +43,28 @@
             this.btnShop.UseVisualStyleBackColor = true;
             this.btnShop.Click += new System.EventHandler(this.btnShop_Click);
             // 
+            // btnEmployees
+            // 
+            this.btnEmployees.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnEmployees.Location = new System.Drawing.Point(252, 281);
+            this.btnEmployees.Name = "btnEmployees";
+            this.btnEmployees.Size = new System.Drawing.Size(156, 58);
+            this.btnEmployees.TabIndex = 1;
+            this.btnEmployees.Text = "Employees";
+            this.btnEmployees.UseVisualStyleBackColor = true;
+            this.btnEmployees.Click += new System.EventHandler(this.btnEmployees_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnEmployees);
             this.Controls.Add(this.btnShop);
             this.Name = "MainForm";
             this.Text = "MainForm";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
 
         }
@@ -58,5 +72,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnShop;
+        private System.Windows.Forms.Button btnEmployees;
     }
 }

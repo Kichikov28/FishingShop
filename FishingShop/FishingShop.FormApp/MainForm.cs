@@ -17,8 +17,19 @@ namespace FishingShop.FormApp
 
         private void btnShop_Click(object sender, EventArgs e)
         {
-            ShopsForm shopsForm= new ShopsForm();
-            shopsForm.ShowDialog();
+            ShopForm shopForm= new ShopForm();
+            shopForm.ShowDialog();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEmployees_Click(object sender, EventArgs e)
+        {
+            EmployeeForm employeeForm=new EmployeeForm();
+            employeeForm.ShowDialog();
         }
     }
 }

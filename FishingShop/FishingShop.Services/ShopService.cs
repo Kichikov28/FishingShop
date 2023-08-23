@@ -141,6 +141,19 @@
 
             return startDate.AddDays(randomDays);
         }
+        public List<string> GetShopsBasicInfo(int page = 1, int count = 10)
+        {
+            List<string> list = null;
+            using (context = new AppDbContext())
+            {
+                list = context.Shops
+                    .Skip((page - 1) * count)
+                    .Take(count)
+                    .Select(x => $"{x.Id} - {x.Name} located in {x.Location} has {x.Rating} rating")
+                    .ToList();
+            }
+            return list;
+        }
     }
 }
 

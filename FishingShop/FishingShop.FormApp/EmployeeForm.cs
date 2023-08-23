@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace FishingShop.FormApp
 {
-    public partial class ShopsForm : Form
+    public partial class EmployeeForm : Form
     {
-        public ShopsForm()
+        public EmployeeForm()
         {
             InitializeComponent();
         }
