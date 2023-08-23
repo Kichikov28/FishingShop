@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishingShop.Seeder", "Fishi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishingShop.ConsoleApp", "FishingShop.ConsoleApp\FishingShop.ConsoleApp.csproj", "{10FD1A8D-FFE7-4E3E-BE11-967F62F059E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishingShop.FormApp", "FishingShop.FormApp\FishingShop.FormApp.csproj", "{58B44FB2-741E-4D8C-86B4-E6A0F53383EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FishingShop.FormApp", "FishingShop.FormApp\FishingShop.FormApp.csproj", "{58B44FB2-741E-4D8C-86B4-E6A0F53383EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FishingShop.WebApp", "FishingShop.WebApp\FishingShop.WebApp.csproj", "{E9A0F295-7050-4CA4-8A90-926054C14099}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{58B44FB2-741E-4D8C-86B4-E6A0F53383EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58B44FB2-741E-4D8C-86B4-E6A0F53383EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58B44FB2-741E-4D8C-86B4-E6A0F53383EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9A0F295-7050-4CA4-8A90-926054C14099}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9A0F295-7050-4CA4-8A90-926054C14099}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9A0F295-7050-4CA4-8A90-926054C14099}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9A0F295-7050-4CA4-8A90-926054C14099}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
