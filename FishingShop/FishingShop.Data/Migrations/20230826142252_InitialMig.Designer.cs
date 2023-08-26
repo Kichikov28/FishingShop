@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FishingShop.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230821125809_InitialMig")]
+    [Migration("20230826142252_InitialMig")]
     partial class InitialMig
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

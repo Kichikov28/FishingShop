@@ -52,5 +52,25 @@
             return productsInfo;
 
         }
+        public List<string> GetFromShop()
+        {
+            List<string> shopsInfo;
+            using (context = new AppDbContext())
+            {
+                shopsInfo = this.context.Shops.
+                     OrderBy(x => x.Id)
+                     .Select(x => $"{x.Id} - {x.Name}")
+                     .ToList();
+            }
+            return shopsInfo;
+
+        }
+        public List<string> GetToShops(int shopid)
+        {
+            return this.context.Shops
+                .Where(x => x.Id == shopid)
+                 .OrderBy(x => x.Id)
+                .Select(x => $"{x.Id} - {x.Name}").ToList();
+        }
     }
 }

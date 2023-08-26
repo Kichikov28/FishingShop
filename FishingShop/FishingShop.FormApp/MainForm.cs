@@ -31,5 +31,17 @@ namespace FishingShop.FormApp
             EmployeeForm employeeForm=new EmployeeForm();
             employeeForm.ShowDialog();
         }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            ProductForm productForm=new ProductForm();
+            productForm.ShowDialog();
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            Order orderForm = new Order();
+            orderForm.ShowDialog();
+        }
     }
 }

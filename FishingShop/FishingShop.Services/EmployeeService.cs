@@ -167,5 +167,18 @@
                 return (int)Math.Ceiling(context.Employees.Count() / (double)count);
             }
         }
+        public List<string> GetEmployeesBasicInfo(int page = 1, int count = 10)
+        {
+            List<string> list = null;
+            using (context = new AppDbContext())
+            {
+                list = context.Employees
+                    .Skip((page - 1) * count)
+                    .Take(count)
+                    .Select(x => $"{x.Id} - {x.FirstName} {x.LastName} is {x.Age}")
+                    .ToList();
+            }
+            return list;
+        }
     }
 }
