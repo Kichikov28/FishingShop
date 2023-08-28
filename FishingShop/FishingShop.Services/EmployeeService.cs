@@ -2,6 +2,7 @@
 {
     using FishingShop.Data;
     using FishingShop.Models;
+    using FishingShop.ViewModel.Employees;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -179,6 +180,71 @@
                     .ToList();
             }
             return list;
+        }
+        public EmployeesIndexViewModel GetEmployees(EmployeesIndexViewModel model)
+        {
+            using (context = new AppDbContext())
+            {
+                model.Employees = context.Employees
+                .Skip((model.PageNumber - 1) * model.ItemsPerPage)
+                .Take(model.ItemsPerPage)
+                .Select(x => new EmployeeIndexViewModel()
+                {
+                    Id = x.Id,
+                    FirstName = x.FirstName,
+                    LastName = x.LastName,
+                    Age = x.Age,
+                    Position = x.Position,
+                    Salary = x.Salary,
+                    ContactPhone=x.ContactPhone
+                }) 
+                .ToList();
+
+                model.ElementsCount = context.Employees.Count();
+
+                return model;
+            }
+        }
+        public List<EmployeeIndexViewModel> GetLowestPaidEmployees()
+        {
+            using (context = new AppDbContext())
+            {
+                return context.Employees.OrderBy(x => x.Salary)
+                .Take(6)
+                .Select(x => new EmployeeIndexViewModel()
+                {
+                    Id = x.Id,
+                    FirstName = x.FirstName,
+                    LastName = x.LastName,
+                    Age = x.Age,
+                    Position = x.Position,
+                    Salary = x.Salary,
+                    ContactPhone = x.ContactPhone
+                })
+                .ToList();
+            }
+
+        }
+
+        public List<EmployeeIndexViewModel> GetHighestPaidEmployees()
+        {
+            using (context = new AppDbContext())
+            {
+                return context.Employees.OrderByDescending(x => x.Salary)
+                .Take(6)
+                .Select(x => new EmployeeIndexViewModel()
+                {
+                    Id = x.Id,
+                    FirstName = x.FirstName,
+                    LastName = x.LastName,
+                    Age = x.Age,
+                    Position = x.Position,
+                    Salary = x.Salary,
+                    ContactPhone = x.ContactPhone
+                })
+                .ToList();
+            }
+
         }
     }
 }

@@ -1,0 +1,35 @@
+﻿@model FishingShop.ViewModel.Employees.EmployeesIndexViewModel
+
+<h1>Employees page</h1>
+
+
+<table class="table table-bordered table-hover">
+    <thead class="thead-light">
+        <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Age</th>
+            <th>Position</th>
+             <th>Salary</th>
+              <th>ContactPhone</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var e in Model.Employees)
+        {
+                        <tr>
+                            <td>@e.FirstName</td>
+                             <td>@e.LastName</td>
+                             <td>@e.Age</td>
+                             <td>@e.Position</td>
+                            <td>@e.Salary</td>
+                            <td>@e.ContactPhone</td>
+                            <td><img src="@e.ImageUrl" width="300px" height="150px" /></td>
+                        </tr>
+        }
+    </tbody>
+    <tfoot>
+    </tfoot>
+</table>
+<partial name="_PagingPartial"/>

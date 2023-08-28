@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FishingShop.Data\FishingShop.Data.csproj" />
+    <ProjectReference Include="..\FishingShop.ViewModel\FishingShop.ViewModel.csproj" />
   </ItemGroup>
 
 </Project>
