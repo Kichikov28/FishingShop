@@ -69,6 +69,7 @@
             this.groupBoxCreateShop.Controls.Add(this.label3);
             this.groupBoxCreateShop.Controls.Add(this.label2);
             this.groupBoxCreateShop.Controls.Add(this.label1);
+            this.groupBoxCreateShop.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBoxCreateShop.Location = new System.Drawing.Point(49, 41);
             this.groupBoxCreateShop.Name = "groupBoxCreateShop";
             this.groupBoxCreateShop.Size = new System.Drawing.Size(384, 306);
@@ -80,7 +81,7 @@
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(134, 184);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(244, 27);
+            this.dateTimePicker1.Size = new System.Drawing.Size(244, 25);
             this.dateTimePicker1.TabIndex = 12;
             // 
             // comboBoxRating
@@ -88,7 +89,7 @@
             this.comboBoxRating.FormattingEnabled = true;
             this.comboBoxRating.Location = new System.Drawing.Point(134, 149);
             this.comboBoxRating.Name = "comboBoxRating";
-            this.comboBoxRating.Size = new System.Drawing.Size(131, 28);
+            this.comboBoxRating.Size = new System.Drawing.Size(131, 25);
             this.comboBoxRating.TabIndex = 11;
             // 
             // comboBoxType
@@ -99,7 +100,7 @@
             "saltwater"});
             this.comboBoxType.Location = new System.Drawing.Point(134, 112);
             this.comboBoxType.Name = "comboBoxType";
-            this.comboBoxType.Size = new System.Drawing.Size(131, 28);
+            this.comboBoxType.Size = new System.Drawing.Size(131, 25);
             this.comboBoxType.TabIndex = 10;
             // 
             // comboBoxLocation
@@ -122,14 +123,14 @@
             "Chicago"});
             this.comboBoxLocation.Location = new System.Drawing.Point(134, 77);
             this.comboBoxLocation.Name = "comboBoxLocation";
-            this.comboBoxLocation.Size = new System.Drawing.Size(131, 28);
+            this.comboBoxLocation.Size = new System.Drawing.Size(131, 25);
             this.comboBoxLocation.TabIndex = 9;
             // 
             // textBoxName
             // 
             this.textBoxName.Location = new System.Drawing.Point(134, 33);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(131, 27);
+            this.textBoxName.Size = new System.Drawing.Size(131, 25);
             this.textBoxName.TabIndex = 8;
             // 
             // checkBoxDeleteShop
@@ -137,7 +138,7 @@
             this.checkBoxDeleteShop.AutoSize = true;
             this.checkBoxDeleteShop.Location = new System.Drawing.Point(27, 217);
             this.checkBoxDeleteShop.Name = "checkBoxDeleteShop";
-            this.checkBoxDeleteShop.Size = new System.Drawing.Size(109, 24);
+            this.checkBoxDeleteShop.Size = new System.Drawing.Size(113, 21);
             this.checkBoxDeleteShop.TabIndex = 7;
             this.checkBoxDeleteShop.Text = "DeleteShop";
             this.checkBoxDeleteShop.UseVisualStyleBackColor = true;
@@ -167,7 +168,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(21, 184);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 20);
+            this.label5.Size = new System.Drawing.Size(116, 17);
             this.label5.TabIndex = 4;
             this.label5.Text = "Established On";
             // 
@@ -176,7 +177,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(24, 149);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 20);
+            this.label4.Size = new System.Drawing.Size(53, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "Rating";
             // 
@@ -185,7 +186,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(27, 115);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 20);
+            this.label3.Size = new System.Drawing.Size(43, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Type";
             // 
@@ -194,7 +195,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(27, 77);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 20);
+            this.label2.Size = new System.Drawing.Size(69, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Location";
             // 
@@ -203,7 +204,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(27, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 20);
+            this.label1.Size = new System.Drawing.Size(49, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Name";
             // 
@@ -211,6 +212,7 @@
             // 
             this.groupBoxOptions.Controls.Add(this.radioBtnEdit);
             this.groupBoxOptions.Controls.Add(this.radioBtnAdd);
+            this.groupBoxOptions.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBoxOptions.Location = new System.Drawing.Point(99, 361);
             this.groupBoxOptions.Name = "groupBoxOptions";
             this.groupBoxOptions.Size = new System.Drawing.Size(261, 65);
@@ -223,7 +225,7 @@
             this.radioBtnEdit.AutoSize = true;
             this.radioBtnEdit.Location = new System.Drawing.Point(157, 25);
             this.radioBtnEdit.Name = "radioBtnEdit";
-            this.radioBtnEdit.Size = new System.Drawing.Size(56, 24);
+            this.radioBtnEdit.Size = new System.Drawing.Size(57, 21);
             this.radioBtnEdit.TabIndex = 1;
             this.radioBtnEdit.TabStop = true;
             this.radioBtnEdit.Text = "Edit";
@@ -234,7 +236,7 @@
             this.radioBtnAdd.AutoSize = true;
             this.radioBtnAdd.Location = new System.Drawing.Point(39, 25);
             this.radioBtnAdd.Name = "radioBtnAdd";
-            this.radioBtnAdd.Size = new System.Drawing.Size(58, 24);
+            this.radioBtnAdd.Size = new System.Drawing.Size(57, 21);
             this.radioBtnAdd.TabIndex = 0;
             this.radioBtnAdd.TabStop = true;
             this.radioBtnAdd.Text = "Add";
@@ -266,7 +268,8 @@
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(641, 377);
+            this.btnNext.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnNext.Location = new System.Drawing.Point(625, 377);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(94, 49);
             this.btnNext.TabIndex = 4;
@@ -276,6 +279,7 @@
             // 
             // buttonPrevious
             // 
+            this.buttonPrevious.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonPrevious.Location = new System.Drawing.Point(487, 377);
             this.buttonPrevious.Name = "buttonPrevious";
             this.buttonPrevious.Size = new System.Drawing.Size(94, 49);

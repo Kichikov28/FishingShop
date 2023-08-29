@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.groupBoxAddProduct = new System.Windows.Forms.GroupBox();
-            this.labelName = new System.Windows.Forms.Label();
-            this.labelPrice = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.textBoxName = new System.Windows.Forms.TextBox();
-            this.textBoxPrice = new System.Windows.Forms.TextBox();
-            this.textBoxDelete = new System.Windows.Forms.TextBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.textBoxDelete = new System.Windows.Forms.TextBox();
+            this.textBoxPrice = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.labelPrice = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
             this.listBoxProducts = new System.Windows.Forms.ListBox();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnPrevious = new System.Windows.Forms.Button();
             this.comboBoxProductsPerPage = new System.Windows.Forms.ComboBox();
             this.labelPages = new System.Windows.Forms.Label();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.groupBoxAddProduct.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,40 +57,53 @@
             this.groupBoxAddProduct.Controls.Add(this.btnAdd);
             this.groupBoxAddProduct.Controls.Add(this.labelPrice);
             this.groupBoxAddProduct.Controls.Add(this.labelName);
+            this.groupBoxAddProduct.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBoxAddProduct.Location = new System.Drawing.Point(44, 45);
             this.groupBoxAddProduct.Name = "groupBoxAddProduct";
-            this.groupBoxAddProduct.Size = new System.Drawing.Size(308, 286);
+            this.groupBoxAddProduct.Size = new System.Drawing.Size(327, 286);
             this.groupBoxAddProduct.TabIndex = 0;
             this.groupBoxAddProduct.TabStop = false;
             this.groupBoxAddProduct.Text = "AddProduct";
             // 
-            // labelName
+            // btnDelete
             // 
-            this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(29, 34);
-            this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(49, 20);
-            this.labelName.TabIndex = 0;
-            this.labelName.Text = "Name";
+            this.btnDelete.Location = new System.Drawing.Point(187, 225);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(110, 39);
+            this.btnDelete.TabIndex = 8;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // labelPrice
+            // label3
             // 
-            this.labelPrice.AutoSize = true;
-            this.labelPrice.Location = new System.Drawing.Point(29, 60);
-            this.labelPrice.Name = "labelPrice";
-            this.labelPrice.Size = new System.Drawing.Size(41, 20);
-            this.labelPrice.TabIndex = 1;
-            this.labelPrice.Text = "Price";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 178);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(195, 17);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Enter Id to delete product:";
             // 
-            // btnAdd
+            // textBoxDelete
             // 
-            this.btnAdd.Location = new System.Drawing.Point(29, 114);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(95, 41);
-            this.btnAdd.TabIndex = 2;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.textBoxDelete.Location = new System.Drawing.Point(207, 175);
+            this.textBoxDelete.Name = "textBoxDelete";
+            this.textBoxDelete.Size = new System.Drawing.Size(102, 25);
+            this.textBoxDelete.TabIndex = 6;
+            // 
+            // textBoxPrice
+            // 
+            this.textBoxPrice.Location = new System.Drawing.Point(98, 60);
+            this.textBoxPrice.Name = "textBoxPrice";
+            this.textBoxPrice.Size = new System.Drawing.Size(125, 25);
+            this.textBoxPrice.TabIndex = 5;
+            // 
+            // textBoxName
+            // 
+            this.textBoxName.Location = new System.Drawing.Point(98, 27);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(125, 25);
+            this.textBoxName.TabIndex = 4;
             // 
             // btnClear
             // 
@@ -102,35 +115,35 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // textBoxName
+            // btnAdd
             // 
-            this.textBoxName.Location = new System.Drawing.Point(98, 27);
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(125, 27);
-            this.textBoxName.TabIndex = 4;
+            this.btnAdd.Location = new System.Drawing.Point(29, 114);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(95, 41);
+            this.btnAdd.TabIndex = 2;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // textBoxPrice
+            // labelPrice
             // 
-            this.textBoxPrice.Location = new System.Drawing.Point(98, 60);
-            this.textBoxPrice.Name = "textBoxPrice";
-            this.textBoxPrice.Size = new System.Drawing.Size(125, 27);
-            this.textBoxPrice.TabIndex = 5;
+            this.labelPrice.AutoSize = true;
+            this.labelPrice.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelPrice.Location = new System.Drawing.Point(29, 60);
+            this.labelPrice.Name = "labelPrice";
+            this.labelPrice.Size = new System.Drawing.Size(45, 17);
+            this.labelPrice.TabIndex = 1;
+            this.labelPrice.Text = "Price";
             // 
-            // textBoxDelete
+            // labelName
             // 
-            this.textBoxDelete.Location = new System.Drawing.Point(195, 175);
-            this.textBoxDelete.Name = "textBoxDelete";
-            this.textBoxDelete.Size = new System.Drawing.Size(102, 27);
-            this.textBoxDelete.TabIndex = 6;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 178);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(183, 20);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Enter Id to delete product:";
+            this.labelName.AutoSize = true;
+            this.labelName.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelName.Location = new System.Drawing.Point(29, 34);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(49, 17);
+            this.labelName.TabIndex = 0;
+            this.labelName.Text = "Name";
             // 
             // listBoxProducts
             // 
@@ -144,6 +157,7 @@
             // 
             // btnNext
             // 
+            this.btnNext.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnNext.Location = new System.Drawing.Point(570, 369);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(94, 52);
@@ -154,6 +168,7 @@
             // 
             // btnPrevious
             // 
+            this.btnPrevious.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnPrevious.Location = new System.Drawing.Point(423, 369);
             this.btnPrevious.Name = "btnPrevious";
             this.btnPrevious.Size = new System.Drawing.Size(94, 52);
@@ -185,20 +200,11 @@
             this.labelPages.TabIndex = 5;
             this.labelPages.Text = "-";
             // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(187, 225);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(110, 39);
-            this.btnDelete.TabIndex = 8;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
             // ProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(804, 440);
             this.Controls.Add(this.labelPages);
             this.Controls.Add(this.comboBoxProductsPerPage);

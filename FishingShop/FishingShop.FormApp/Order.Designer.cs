@@ -69,27 +69,30 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(726, 429);
+            this.btnDelete.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDelete.Location = new System.Drawing.Point(756, 434);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(161, 40);
             this.btnDelete.TabIndex = 3;
-            this.btnDelete.Text = "DeleteProduct";
+            this.btnDelete.Text = "Delete Product";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnCreateOrder
             // 
+            this.btnCreateOrder.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnCreateOrder.Location = new System.Drawing.Point(30, 443);
             this.btnCreateOrder.Name = "btnCreateOrder";
             this.btnCreateOrder.Size = new System.Drawing.Size(161, 48);
             this.btnCreateOrder.TabIndex = 4;
-            this.btnCreateOrder.Text = "CreateOrder";
+            this.btnCreateOrder.Text = "Create Order";
             this.btnCreateOrder.UseVisualStyleBackColor = true;
             this.btnCreateOrder.Click += new System.EventHandler(this.btnCreateOrder_Click);
             // 
             // btnShowOrder
             // 
-            this.btnShowOrder.Location = new System.Drawing.Point(726, 475);
+            this.btnShowOrder.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnShowOrder.Location = new System.Drawing.Point(756, 480);
             this.btnShowOrder.Name = "btnShowOrder";
             this.btnShowOrder.Size = new System.Drawing.Size(161, 40);
             this.btnShowOrder.TabIndex = 5;
@@ -109,9 +112,10 @@
             // labelInfo
             // 
             this.labelInfo.AutoSize = true;
-            this.labelInfo.Location = new System.Drawing.Point(403, 25);
+            this.labelInfo.Font = new System.Drawing.Font("Rockwell", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelInfo.Location = new System.Drawing.Point(396, 25);
             this.labelInfo.Name = "labelInfo";
-            this.labelInfo.Size = new System.Drawing.Size(148, 20);
+            this.labelInfo.Size = new System.Drawing.Size(179, 20);
             this.labelInfo.TabIndex = 7;
             this.labelInfo.Text = "Step 1- Choose Shop";
             // 
@@ -119,6 +123,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(968, 532);
             this.Controls.Add(this.labelInfo);
             this.Controls.Add(this.comboBox1);

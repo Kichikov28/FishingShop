@@ -73,6 +73,7 @@
             this.groupBoxHireEmployee.Controls.Add(this.label3);
             this.groupBoxHireEmployee.Controls.Add(this.label2);
             this.groupBoxHireEmployee.Controls.Add(this.label1);
+            this.groupBoxHireEmployee.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBoxHireEmployee.Location = new System.Drawing.Point(49, 32);
             this.groupBoxHireEmployee.Name = "groupBoxHireEmployee";
             this.groupBoxHireEmployee.Size = new System.Drawing.Size(373, 327);
@@ -85,7 +86,7 @@
             this.checkBoxFire.AutoSize = true;
             this.checkBoxFire.Location = new System.Drawing.Point(21, 235);
             this.checkBoxFire.Name = "checkBoxFire";
-            this.checkBoxFire.Size = new System.Drawing.Size(121, 24);
+            this.checkBoxFire.Size = new System.Drawing.Size(129, 21);
             this.checkBoxFire.TabIndex = 14;
             this.checkBoxFire.Text = "FireEmployee";
             this.checkBoxFire.UseVisualStyleBackColor = true;
@@ -115,7 +116,7 @@
             this.comboBoxSalary.FormattingEnabled = true;
             this.comboBoxSalary.Location = new System.Drawing.Point(165, 166);
             this.comboBoxSalary.Name = "comboBoxSalary";
-            this.comboBoxSalary.Size = new System.Drawing.Size(125, 28);
+            this.comboBoxSalary.Size = new System.Drawing.Size(125, 25);
             this.comboBoxSalary.TabIndex = 11;
             // 
             // comboBoxPosition
@@ -128,7 +129,7 @@
             "Assistant Manager"});
             this.comboBoxPosition.Location = new System.Drawing.Point(164, 132);
             this.comboBoxPosition.Name = "comboBoxPosition";
-            this.comboBoxPosition.Size = new System.Drawing.Size(125, 28);
+            this.comboBoxPosition.Size = new System.Drawing.Size(125, 25);
             this.comboBoxPosition.TabIndex = 10;
             // 
             // comboBoxAge
@@ -136,28 +137,28 @@
             this.comboBoxAge.FormattingEnabled = true;
             this.comboBoxAge.Location = new System.Drawing.Point(165, 98);
             this.comboBoxAge.Name = "comboBoxAge";
-            this.comboBoxAge.Size = new System.Drawing.Size(125, 28);
+            this.comboBoxAge.Size = new System.Drawing.Size(125, 25);
             this.comboBoxAge.TabIndex = 9;
             // 
             // textBoxPhone
             // 
             this.textBoxPhone.Location = new System.Drawing.Point(165, 200);
             this.textBoxPhone.Name = "textBoxPhone";
-            this.textBoxPhone.Size = new System.Drawing.Size(125, 27);
+            this.textBoxPhone.Size = new System.Drawing.Size(125, 25);
             this.textBoxPhone.TabIndex = 8;
             // 
             // textBoxLastName
             // 
             this.textBoxLastName.Location = new System.Drawing.Point(165, 65);
             this.textBoxLastName.Name = "textBoxLastName";
-            this.textBoxLastName.Size = new System.Drawing.Size(125, 27);
+            this.textBoxLastName.Size = new System.Drawing.Size(125, 25);
             this.textBoxLastName.TabIndex = 7;
             // 
             // textBoxName
             // 
             this.textBoxName.Location = new System.Drawing.Point(165, 35);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(125, 27);
+            this.textBoxName.Size = new System.Drawing.Size(125, 25);
             this.textBoxName.TabIndex = 6;
             // 
             // label6
@@ -165,7 +166,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(21, 200);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(101, 20);
+            this.label6.Size = new System.Drawing.Size(108, 17);
             this.label6.TabIndex = 5;
             this.label6.Text = "ContactPhone";
             // 
@@ -174,7 +175,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(31, 166);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 20);
+            this.label5.Size = new System.Drawing.Size(51, 17);
             this.label5.TabIndex = 4;
             this.label5.Text = "Salary";
             // 
@@ -183,7 +184,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(31, 135);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 20);
+            this.label4.Size = new System.Drawing.Size(66, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "Position";
             // 
@@ -192,7 +193,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(31, 101);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 20);
+            this.label3.Size = new System.Drawing.Size(36, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Age";
             // 
@@ -201,7 +202,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(31, 68);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 20);
+            this.label2.Size = new System.Drawing.Size(77, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "LastName";
             // 
@@ -210,7 +211,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(31, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 20);
+            this.label1.Size = new System.Drawing.Size(80, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "FirstName";
             // 
@@ -218,6 +219,7 @@
             // 
             this.groupBoxOptions.Controls.Add(this.radioBtnEdit);
             this.groupBoxOptions.Controls.Add(this.radioBtnAdd);
+            this.groupBoxOptions.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBoxOptions.Location = new System.Drawing.Point(92, 365);
             this.groupBoxOptions.Name = "groupBoxOptions";
             this.groupBoxOptions.Size = new System.Drawing.Size(250, 61);
@@ -230,7 +232,7 @@
             this.radioBtnEdit.AutoSize = true;
             this.radioBtnEdit.Location = new System.Drawing.Point(140, 26);
             this.radioBtnEdit.Name = "radioBtnEdit";
-            this.radioBtnEdit.Size = new System.Drawing.Size(56, 24);
+            this.radioBtnEdit.Size = new System.Drawing.Size(57, 21);
             this.radioBtnEdit.TabIndex = 1;
             this.radioBtnEdit.TabStop = true;
             this.radioBtnEdit.Text = "Edit";
@@ -241,7 +243,7 @@
             this.radioBtnAdd.AutoSize = true;
             this.radioBtnAdd.Location = new System.Drawing.Point(33, 26);
             this.radioBtnAdd.Name = "radioBtnAdd";
-            this.radioBtnAdd.Size = new System.Drawing.Size(58, 24);
+            this.radioBtnAdd.Size = new System.Drawing.Size(60, 21);
             this.radioBtnAdd.TabIndex = 0;
             this.radioBtnAdd.TabStop = true;
             this.radioBtnAdd.Text = "Hire";
@@ -269,6 +271,7 @@
             // 
             // btnPrevious
             // 
+            this.btnPrevious.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnPrevious.Location = new System.Drawing.Point(521, 391);
             this.btnPrevious.Name = "btnPrevious";
             this.btnPrevious.Size = new System.Drawing.Size(94, 48);
@@ -279,6 +282,7 @@
             // 
             // btnNext
             // 
+            this.btnNext.Font = new System.Drawing.Font("Rockwell", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnNext.Location = new System.Drawing.Point(653, 391);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(94, 48);
@@ -305,6 +309,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(940, 477);
             this.Controls.Add(this.comboBoxEmployeesPerPage);
             this.Controls.Add(this.btnNext);

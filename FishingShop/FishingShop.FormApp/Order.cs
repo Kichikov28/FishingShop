@@ -30,6 +30,7 @@
             clients.ForEach(x => comboBox1.Items.Add(x));
             comboBox1.SelectedIndex = 0;
             listBoxProducts.Enabled = false;
+            labelInfo.Text = "Step 1- Choose shop";
         }
 
         private void listBoxShops_DoubleClick(object sender, EventArgs e)
