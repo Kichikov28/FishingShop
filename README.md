@@ -8,10 +8,10 @@ In the connection string, replace the server name with the name of your own SQL 
 3. Perform Migrations:
 Open the Package Manager Console in Visual Studio.
 
-Run the following command to add an initial migration:
+  Run the following command to add an initial migration:
 Add-Migration InitialMigration -OutputDir Data/Migrations -Project FishingShop.Data -StartupProject FishingShop.Data
 
-After successfully adding the migration, run the following command to update the database:
+  After successfully adding the migration, run the following command to update the database:
 Update-Database -Project FishingShop.Data -StartupProject FishingShop.Data
 
 4. Seed the Database:
