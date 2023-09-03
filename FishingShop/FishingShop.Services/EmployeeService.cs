@@ -134,7 +134,7 @@
                 employee.Salary = salary;
                 context.Employees.Update(employee);
                 context.SaveChanges();
-                return $"Employee {employee.FirstName} {employee.LastName}'s new salary is: {salary}";
+                return $"Employee {employee.FirstName} {employee.LastName}'s new salary is: {salary}leva";
             }
         }
         public string GetAllEmployeesInfo(int page = 1, int count = 10)
