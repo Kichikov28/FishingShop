@@ -1,9 +1,11 @@
-#AuqaLure-FishingShop
+AquaLure-FishingShop
+
 Download the Project:
 Obtain the FishingShop project files.
 
 Update Connection String:
 Open the solution and locate the AppDbContext class.
+
 In the connection string, replace the server name with the name of your own SQL Server Management Studio (SSMS) server, where you want to host the FishingShop database.
 
 Perform Migrations:
